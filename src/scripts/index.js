@@ -3,6 +3,33 @@ import '../styles/main.css';
 
 console.log('Hello Coders! :)');
 
+//navbar in mobile
+let btn = document.querySelector(".burger-btn");
+let menu = document.querySelector(".nav-links");
+let links = document.querySelectorAll(".nav-links li a");
+btn.addEventListener("click", function () {
+  menu.classList.toggle("nav-active");
+});
+
+for (let i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function () {
+    menu.classList.toggle("nav-active");
+  });
+}
+
+//change bg when scroll
+// let navbar = document.querySelector("header");
+
+// window.addEventListener("scroll", function () {
+//   let valueScroll = window.scrollY;
+//   console.log(valueScroll);
+//   if (valueScroll < 70) {
+//     navbar.classList.remove("bg-nav-color");
+//   } else {
+//     navbar.classList.add("bg-nav-color");
+//   }
+// });
+
 const getCards = async () => {
     const response = await fetch('../data/DATA.json');
 
@@ -20,7 +47,7 @@ const renderAllResto = (resto) =>{
          <div class="card">
               <img src="${res.pictureId}" alt="">
               <div class="card-content">
-                <h5>${res.city}</h5>
+                <span>${res.city}</span>
                 <p>Rating: ${res.rating}</p>
                 <h4>${res.name}</h4>
                 <p>${res.description}</p>
