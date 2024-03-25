@@ -48,9 +48,9 @@ const renderAllResto = (resto) =>{
               <img src="${res.pictureId}" alt="">
               <div class="card-content">
                 <span>${res.city}</span>
-                <p>Rating: ${res.rating}</p>
+                <div class="rating">${res.rating}</div>
                 <h4>${res.name}</h4>
-                <p>${res.description}</p>
+                <p>${res.description.substring(0,100)}...</p>
               </div>
             </div>
         `
