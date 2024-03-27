@@ -221,10 +221,7 @@ footer {
     padding: 150px 30px 50px 30px;
     transform: translateY(-200%);
     border-radius: 20px;
-  /* background-color:  rgba(6, 88, 3, 0.8); */
-  background-color: green;
-
-    /* background-color: rgba(20, 20, 20, 0.7); */
+    background-color: green;
     -webkit-backdrop-filter: blur(10px) saturate(180%);
     backdrop-filter: blur(10px) saturate(180%);
     box-shadow: 0 14px 25px rgba(8, 8, 8, 0.623), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -273,8 +270,8 @@ footer {
     padding: 2rem 1rem;
     font-size: 2.5rem;
     box-shadow: 0 14px 25px rgba(74, 255, 3, 0.623), 0 10px 10px rgba(0, 0, 0, 0.22);
-
   }
+
   .wrapper {
     grid-template-columns:repeat(1, 1fr);
     gap: 1rem;
