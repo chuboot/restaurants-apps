@@ -44,7 +44,8 @@ const renderAllResto = (resto) =>{
     listRestoElement.innerHTML = '';
     resto.forEach((res, i) => {
         listRestoElement.innerHTML += `
-        <div class="card" tabindex="${i +1}">
+        <a href="#">
+        ${i === 0?`<div class="card" id="maincontent" tabindex="0">`:`<div class="card">` }
               <img src="${res.pictureId}" alt="">
               <span>${res.city}</span>
               <div class="card-content">
@@ -53,6 +54,7 @@ const renderAllResto = (resto) =>{
                 <p>${res.description.substring(0,100)}...</p>
               </div>
         </div>
+        </a>
         `
     });
 };
