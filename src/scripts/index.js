@@ -20,9 +20,8 @@ for (let i = 0; i < links.length; i++) {
 // change bg when scroll
 let navbar = document.querySelector("nav");
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll",  () => {
   let valueScroll = window.scrollY;
-  console.log(valueScroll);
   if (valueScroll < 70) {
     navbar.classList.remove("bg-nav-color");
   } else {
@@ -30,6 +29,8 @@ window.addEventListener("scroll", function () {
   }
 });
 
+
+//get cards
 const getCards = async () => {
     const response = await fetch('../data/DATA.json');
 
@@ -43,7 +44,7 @@ const renderAllResto = (resto) =>{
     listRestoElement.innerHTML = '';
     resto.forEach((res, i) => {
         listRestoElement.innerHTML += `
-         <div class="card" tabindex="${i}">
+        <div class="card" tabindex="${i +1}">
               <img src="${res.pictureId}" alt="">
               <span>${res.city}</span>
               <div class="card-content">
@@ -51,17 +52,10 @@ const renderAllResto = (resto) =>{
                 <h4>${res.name}</h4>
                 <p>${res.description.substring(0,100)}...</p>
               </div>
-            </div>
+        </div>
         `
     });
 };
 
 getCards();
 
-// async function logMovies() {
-//   const response = await fetch("../data/DATA.json");
-//   const movies = await response.json();
-//   console.log(movies);
-// }
-
-// logMovies();
